@@ -221,8 +221,8 @@ echo "Remove Dropbox's green checkmark icons in Finder"
 file=/Applications/Dropbox.app/Contents/Resources/emblem-dropbox-uptodate.icns
 [ -e "${file}" ] && mv -f "${file}" "${file}.bak"
 
-echo "Set the icon size of Dock items to 34 pixels"
-defaults write com.apple.dock tilesize -int 34
+echo "Set the icon size of Dock items to 24 pixels"
+defaults write com.apple.dock tilesize -int 24
 
 echo "Change minimize/maximize window effect"
 defaults write com.apple.dock mineffect -string "scale"
@@ -323,6 +323,10 @@ defaults write com.apple.Safari \
 
 echo "Add a context menu item for showing the Web Inspector in web views"
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
+
+echo "Enable Web Inspector in Dictionary.app"
+defaults write com.apple.Dictionary \
+  WebKitDeveloperExtras -bool true
 
 echo "Disable send and reply animations in Mail.app"
 defaults write com.apple.mail DisableReplyAnimations -bool true
@@ -565,22 +569,31 @@ if [ -d "$HOME/.brew" ]; then
 fi
 
 #\
-echo green "Episode VII - The git Awakens (git configuration)"
+echo green "Episode VII - The dotfile Awakens (dotfile configuration)"
 #/
 
-if [ -n "$CONFIG" ]; then
+# The undocumented $ONI flag will download and setup my own dotfiles.
+if [ "$ONI" = true ]; then
+  dotfiles="$HOME/dotfiles"
+  # darwin is for fresh OS X machines, there can't be no dotfiles.
+  if [ ! -d "$dotfiles" ]; then
+    echo yellow "Downloading @bucaran dotfiles"
+    git clone "https://github.com/bucaran/dotfiles" "$dotfiles"
+    [ -x "$dotfiles/link" ] || chmod +x "$dotfiles/link"
+    sh "$dotfiles/link"
+  fi
+
+elif [ -n "$CONFIG" ]; then
+  gitfiles="https://raw.githubusercontent.com/bucaran/gitfiles/master"
 
   if [ ! -f "$HOME/.gitconfig" ]; then
     echo "Downloading .gitconfig"
-    curl -L https://raw.githubusercontent.com/bucaran/dotfiles/master/.gitconfig \
-      > .gitconfig
-    echo >> "\n\n"
+    curl -L "$gitfiles/.gitconfig" > .gitconfig
   fi
 
   if [ ! -f "$HOME/.gitignore" ]; then
     echo "Downloading .gitignore"
-    curl -L https://raw.githubusercontent.com/bucaran/dotfiles/master/.gitignore \
-      > .gitignore
+    curl -L "$gitfiles/.gitignore" > .gitignore
   fi
 
   fields=(user.name user.email github.user)
