@@ -21,6 +21,10 @@
 <p align="center">
 <em><strong>It's dangerous to go alone! Take <a href="http://git.io/darwin">this</a>...</strong></em></p>
 
+
+<p align="center">
+<img width="50%" src="https://cloud.githubusercontent.com/assets/8317250/6363772/cfd64676-bce0-11e4-8a4c-a17119425de1.gif"></p>
+
 <hr>
 
 My darwin setup file cherry-picked from [@hjuutilainen](https://github.com/hjuutilainen)/[dotfiles](https://github.com/hjuutilainen/dotfiles/blob/master/bin/osx-user-defaults.sh), [@mathiasbynens](https://github.com/mathiasbynens)/[dotfiles](https://github.com/mathiasbynens/dotfiles/blob/master/.osx) and interweb scavenging.
@@ -83,9 +87,10 @@ curl -L http://git.io/darwin | sh
 
 ### Packages
 
-> [__Add more__](https://github.com/bucaran/darwin/fork) packages here.
+```sh
+... | <PACKAGE_NAME>=true sh
+```
 
-<p align="center">
 <table>
     <tr>
       <td align="center"><a href="https://beyondgrep.com">ACK</a>
@@ -116,17 +121,10 @@ curl -L http://git.io/darwin | sh
       </td>
       <td align="center"><a href="http://www.lcdf.org/gifsicle/">GIFSICLE</a>
       </td>
+      <td align="center"><a href="https://github.com/bucaran/darwin/fork">＋</a>
+      </td>
     </tr>
 </table>
-
-
-<p align="right"><a href="#darwin">:arrow_up:</a></p>
-
-
-```sh
-... | <PACKAGE_NAME>=true sh
-
-```
 
 <p align="right"><a href="#darwin">:arrow_up:</a></p>
 
