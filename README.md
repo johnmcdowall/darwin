@@ -121,8 +121,16 @@ curl -L http://git.io/darwin | sh
       </td>
       <td align="center"><a href="http://www.lcdf.org/gifsicle/">GIFSICLE</a>
       </td>
+      <td align="center"><a href="https://github.com/b4winckler/macvim">MacVim</a>
+      </td>
+      <td align="center"><a href="https://www.vagrantup.com">Vagrant</a>
+      </td>
+      <td align="center"><a href="http://www.videolan.org/vlc/index.html">VLC</a>
+      </td>
+      <tr>
       <td align="center"><a href="https://github.com/bucaran/darwin/fork">＋</a>
       </td>
+      </tr>
     </tr>
 </table>
 

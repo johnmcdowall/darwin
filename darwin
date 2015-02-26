@@ -527,6 +527,18 @@ if [ -d "$HOME/.brew" ]; then
 
   if [ "$CASK" = true ]; then
     brew install caskroom/cask/brew-cask
+
+    if [ "$MVIM" = true ]; then
+      brew cask install macvim
+    fi
+
+    if [ "$VLC" = true ]; then
+      brew cask install vlc
+    fi
+
+    if [ "$VAG" = true ]; then
+      brew cask install vagrant
+    fi
   fi
 
   if [ "$GIT" = true ]; then
