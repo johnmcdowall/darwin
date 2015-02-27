@@ -89,10 +89,13 @@ sudo systemsetup -setrestartfreeze on
 echo "Check for software updates daily, not just once per week"
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 
-echo "Disable Notification Center and remove the menu bar icon"
-launchctl unload \
-  -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist \
-  2> /dev/null
+# I like notification center, but you can opt out with NONC
+if [ "$NC" = true ]; then
+  echo "Disable Notification Center and remove the menu bar icon"
+  launchctl unload \
+    -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist \
+    2> /dev/null
+fi
 
 echo "Disable local Time Machine snapshots"
 sudo tmutil disablelocal
@@ -181,6 +184,9 @@ defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 
 echo "Disable the warning when changing a file extension"
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+
+echo "Show File Extensions"
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
 echo "Enable spring loading for directories"
 defaults write NSGlobalDomain com.apple.springing.enabled -bool true
