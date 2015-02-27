@@ -3,13 +3,13 @@
 <p align="center">
 <b><a href="#run">Run</a></b>
 |
-<b><a href="#more">More</a></b>
+<b><a href="#options">Options</a></b>
 |
 <b><a href="#themes">Themes</a></b>
 |
 <b><a href="https://github.com/bucaran/darwin/wiki/Copy-&-Paste-Recipes">Recipes</a></b>
 |
-<b><a href="#license">License</a></b>
+<b><a href="#about">About</a></b>
 </p>
 
 <p align="center">
@@ -22,20 +22,22 @@
 <em><strong>It's dangerous to go alone! Take <a href="http://git.io/darwin">this</a>...</strong></em></p>
 
 
-<p align="center">
-<img width="50%" src="https://cloud.githubusercontent.com/assets/8317250/6363772/cfd64676-bce0-11e4-8a4c-a17119425de1.gif"></p>
-
 <hr>
 
-My darwin setup file cherry-picked from [@hjuutilainen](https://github.com/hjuutilainen)/[dotfiles](https://github.com/hjuutilainen/dotfiles/blob/master/bin/osx-user-defaults.sh), [@mathiasbynens](https://github.com/mathiasbynens)/[dotfiles](https://github.com/mathiasbynens/dotfiles/blob/master/.osx) and interweb scavenging.
 
-### Run
+<a name="run"></a>
+
+
+<p align="center">
+<img width="80%" src="https://cloud.githubusercontent.com/assets/8317250/6407336/54f358de-be81-11e4-9000-7fcbbeb58011.gif"></p>
+
 
 ```sh
 curl -L http://git.io/darwin | sh
 ```
 
-### More
+
+### Options
 
 * __Install [Powerline](https://github.com/powerline/fonts) fonts__
 
@@ -81,6 +83,12 @@ curl -L http://git.io/darwin | sh
 
 ```sh
 ... | NOQ=true sh
+```
+
+* __Disable Notification Center__
+
+```sh
+... | NC=true sh
 ```
 
 <p align="right"><a href="#darwin">:arrow_up:</a></p>
@@ -156,6 +164,10 @@ No default themes, but you can install one via `THEME=<name>` from the following
 > Note: You are welcome to add more themes to this list, given you submit a PR including the `.terminal` source.
 
 <p align="right"><a href="#darwin">:arrow_up:</a></p>
+
+### About
+
+This is my darwin setup file cherry-picked from [@hjuutilainen](https://github.com/hjuutilainen)/[dotfiles](https://github.com/hjuutilainen/dotfiles/blob/master/bin/osx-user-defaults.sh), [@xero](https://github.com/xero)/[dotfiles](https://github.com/xero/dotfiles), [@mathiasbynens](https://github.com/mathiasbynens)/[dotfiles](https://github.com/mathiasbynens/dotfiles/blob/master/.osx), [@amix](https://github.com/amix)/[vimrc](https://github.com/amix/vimrc) and voracious interweb scavenging.
 
 ### License
 
