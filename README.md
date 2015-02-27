@@ -9,6 +9,8 @@
 |
 <b><a href="https://github.com/bucaran/darwin/wiki/Copy-&-Paste-Recipes">Recipes</a></b>
 |
+<b><a href="#shots">Shots</a></b>
+|
 <b><a href="#about">About</a></b>
 </p>
 
@@ -19,15 +21,13 @@
 </p>
 
 <p align="center">
-<em><strong>It's dangerous to go alone! Take <a href="http://git.io/darwin">this</a>...</strong></em></p>
-
-<p align="center">
-<img width="40%" src="https://cloud.githubusercontent.com/assets/8317250/6407336/54f358de-be81-11e4-9000-7fcbbeb58011.gif">
+<em><strong>It's dangerous to go alone! Take <a href="http://git.io/darwin">this</a>...</strong></em>
 </p>
+
+<a name="run"></a>
 
 <hr>
 
-<a name="run"></a>
 
 ```sh
 curl -L http://git.io/darwin | sh
@@ -160,6 +160,13 @@ No default themes, but you can install one via `THEME=<name>` from the following
 > Note: You are welcome to add more themes to this list, given you submit a PR including the `.terminal` source.
 
 <p align="right"><a href="#darwin">:arrow_up:</a></p>
+
+### Shots
+
+<p align="center">
+<img width="80%" src="https://cloud.githubusercontent.com/assets/8317250/6407336/54f358de-be81-11e4-9000-7fcbbeb58011.gif">
+</p>
+
 
 ### About
 
