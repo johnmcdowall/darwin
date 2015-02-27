@@ -21,21 +21,17 @@
 <p align="center">
 <em><strong>It's dangerous to go alone! Take <a href="http://git.io/darwin">this</a>...</strong></em></p>
 
+<p align="center">
+<img width="40%" src="https://cloud.githubusercontent.com/assets/8317250/6407336/54f358de-be81-11e4-9000-7fcbbeb58011.gif">
+</p>
 
 <hr>
 
-
 <a name="run"></a>
-
-
-<p align="center">
-<img width="80%" src="https://cloud.githubusercontent.com/assets/8317250/6407336/54f358de-be81-11e4-9000-7fcbbeb58011.gif"></p>
-
 
 ```sh
 curl -L http://git.io/darwin | sh
 ```
-
 
 ### Options
 
