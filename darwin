@@ -542,7 +542,7 @@ if [ -d "$HOME/.brew" ]; then
       brew cask install vlc
     fi
 
-    if [ "$VAG" = true ]; then
+    if [ "$VAGRANT" = true ]; then
       brew cask install vagrant
     fi
   fi
