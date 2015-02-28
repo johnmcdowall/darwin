@@ -41,7 +41,7 @@ curl -L http://git.io/darwin | sh
 ... | FONTS=true
 ```
 
-* ___git_ defaults via [_gitfiles_](github.com/bucaran/gitfiles)__
+* ___git_ defaults via [_gitfiles_](https://github.com/bucaran/gitfiles)__
 
 ```sh
 ... | CONFIG="Your Name;e@mail.com;username"
