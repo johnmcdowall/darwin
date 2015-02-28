@@ -593,12 +593,13 @@ echo green "Episode VII - The dotfile Awakens (dotfile configuration)"
 # The undocumented $ONI flag will download and setup my own dotfiles.
 if [ "$ONI" = true ]; then
   dotfiles="$HOME/dotfiles"
+
   # darwin is for fresh OS X machines, there can't be no dotfiles.
   if [ ! -d "$dotfiles" ]; then
     echo yellow "Downloading @bucaran dotfiles"
     git clone "https://github.com/bucaran/dotfiles" "$dotfiles"
-    [ -x "$dotfiles/link" ] || chmod +x "$dotfiles/link"
-    sh "$dotfiles/link"
+    [ -x "$dotfiles/sync" ] || chmod +x "$dotfiles/sync"
+    sh "$dotfiles/sync"
   fi
 
 elif [ -n "$CONFIG" ]; then
@@ -625,11 +626,11 @@ elif [ -n "$CONFIG" ]; then
 fi
 
 echo
-echo yellow "                 ,--.                          ,--."
-echo green "                ,-|  | ,--,--.,--.--.,--.   ,--.\`--',--,--,"
-echo blue "               ' .-. |' ,-.  ||  .--'|  |.'.|  |,--.|      \\ "
-echo purple "               \ \`-' |\ '-'  ||  |   |   .'.   ||  ||  ||  |"
-echo red "                \`---'  \`--\`--'\`--'   '--'   '--'\`--'\`--''--'"
+echo yellow   "                 ,--.                          ,--."
+echo green    "                ,-|  | ,--,--.,--.--.,--.   ,--.\`--',--,--,"
+echo blue     "               ' .-. |' ,-.  ||  .--'|  |.'.|  |,--.|      \\ "
+echo purple   "               \ \`-' |\ '-'  ||  |   |   .'.   ||  ||  ||  |"
+echo red      "                \`---'  \`--\`--'\`--'   '--'   '--'\`--'\`--''--'"
 echo
 
 if [ "$RESTART" = true ]; then
